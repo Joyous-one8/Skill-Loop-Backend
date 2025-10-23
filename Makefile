@@ -5,4 +5,5 @@ backend:
 	@echo "Backend target: nothing to do"
 
 run:
-	uvicorn main:app --reload
+	. .venv/bin/activate && uvicorn main:app --reload
+
