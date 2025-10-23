@@ -13,7 +13,7 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title=settings.app_name,
     debug=settings.debug,
-    description="SkillSwap API - A platform for skill exchange and learning",
+    description="skillLoop API - A platform for skill exchange and learning",
     version="1.0.0"
 )
 
@@ -97,7 +97,7 @@ def root(request: Request):
     grouped_routes = {k: v for k, v in grouped_routes.items() if v}
     
     return {
-        "message": "SkillSwap API",
+        "message": "skillLoop API",
         "version": "1.0.0",
         "docs": f"{base_url}/docs",
         "redoc": f"{base_url}/redoc",

@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     auth0_client_secret: Optional[str] = None
     
     # App
-    app_name: str = "SkillSwap API"
+    app_name: str = "skillLoop API"
     debug: bool = False
     secret_key: str = "your-secret-key-change-in-production"
     
