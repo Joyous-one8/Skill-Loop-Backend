@@ -1,6 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from config import get_settings
+from config import get_settings
+
+settings = get_settings()
+print("DATABASE_URL being used:", settings.database_url)
 
 settings = get_settings()
 
