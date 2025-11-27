@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: skillloop-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: AUTH0_DOMAIN
+        sync: false
+      - key: AUTH0_API_AUDIENCE
+        sync: false
+      - key: AUTH0_ISSUER
+        sync: false
+      - key: AUTH0_ALGORITHMS
+        sync: false
+      - key: AUTH0_CLIENT_ID
+        sync: false
+      - key: AUTH0_CLIENT_SECRET
+        sync: false
+      - key: SECRET_KEY
+        sync: false
+      - key: DEBUG
+        sync: false
