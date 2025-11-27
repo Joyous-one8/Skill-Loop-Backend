@@ -29,7 +29,12 @@ app.add_middleware(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:4040"],
+    allow_origins=[
+        "http://localhost:3000", 
+        "http://localhost:4040", 
+        "http://localhost:8080",       
+        "https://your-frontend-domain.com"  # <-- add if you deploy frontend later
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
